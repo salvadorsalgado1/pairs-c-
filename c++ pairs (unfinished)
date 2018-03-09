@@ -1,0 +1,112 @@
+/*
+
+
+Write a function
+
+bool equivRel( const set<unsigned> & s, const set<pair<unsigned, unsigned>> & rel);
+
+equivRel returns whether rel is a valid equivalence relation over the set S.
+
+In order for this to be so, we need 4 things to be true:
+
+1. No pair in rel may contain a number that's not in s
+
+2. For every number n in s, (n, n) must be in rel
+
+3. For every pair of numbers a, b in S, if (a, b) is in rel, then (b, a) must also be in rel.
+
+4. For every a, b, and c in S, if (a, b) and (b, c) are in rel, then (a, c) must also be in rel.
+
+Your function's job is to test all 4 conditions; return true iff (if and only if) all 4 conditions are met.
+
+
+
+*/
+
+
+
+#include <iostream>
+#include <set>
+#include <utility>
+#include <iostream>
+#include <cassert>
+#include <algorithm>
+
+using namespace std;
+void show(const set<unsigned> & s);
+void show(const set<unsigned> & s, const set<pair<unsigned, unsigned>> & rel);
+
+
+
+
+
+int main()
+{
+	set<unsigned> s;
+	set<pair<unsigned, unsigned>> rel;
+
+	s.insert(3);
+	rel.insert({ 4,3 });
+
+	show(s);
+	//show(s, rel);
+	
+	cout << endl;
+	
+
+}
+
+bool equivRel(const set<unsigned> & s, const set<pair<unsigned, unsigned>> & rel)
+{
+
+	set<unsigned> ::iterator it;
+	set<pair<unsigned, unsigned>> ::iterator it1;
+
+
+	for (auto it1 = rel.begin(); it1 != rel.end(); it1++)
+	{
+
+
+
+	}
+}
+
+void show(const set<unsigned> & s)
+{
+
+
+	for (auto it = s.begin(); it != s.end(); it++)
+	{
+		
+		cout << " " << *it;
+
+	}
+
+
+
+}
+
+
+
+//
+//void show(const set<unsigned> & s, const set<pair<unsigned, unsigned>> & rel)
+//{
+//
+//	//set<pair<unsigned , unsigned>> rel;
+//	set<unsigned> ::iterator it;
+//	set<pair<unsigned, unsigned>>::iterator it;
+//	
+//	cout << "Regular set" << endl;
+//	for (auto it = s.begin(); it != s.end(); it++)
+//	{
+//
+//		cout << " " << *it;
+//
+//	}
+//	
+//	
+//	
+//
+//
+//
+//}
